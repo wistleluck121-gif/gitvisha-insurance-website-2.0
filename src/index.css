@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: "Manrope", Inter, system-ui, sans-serif;
+  color: #e8f3ff;
+  background: #050914;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  width: 100%;
+  overflow-x: hidden;
+  background: #050914;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Manrope", Inter, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+::selection {
+  background: rgba(84, 213, 255, .28);
+  color: white;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.futuristic-grid {
+  background-image:
+    linear-gradient(rgba(101,216,244,.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(101,216,244,.075) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    rgba(0,0,0,.95) 65%,
+    transparent 100%
+  );
+}
+
+.glass {
+  background: rgba(7, 16, 31, .62);
+  border: 1px solid rgba(142, 193, 230, .12);
+  backdrop-filter: blur(18px);
+}
+
+.glow-border {
+  box-shadow:
+    0 0 0 1px rgba(101,216,244,.08),
+    0 20px 80px rgba(18,117,209,.08);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+/* Mobile polish */
+@media (max-width: 640px) {
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  body {
+    min-width: 320px;
+  }
+
+  .futuristic-grid {
+    background-size: 30px 30px;
+  }
+
+  .glass {
+    backdrop-filter: blur(12px);
+  }
+
+  /* Prevent long words / URLs from pushing the page sideways */
+  h1,
+  h2,
+  h3,
+  p,
+  a,
+  span {
+    overflow-wrap: anywhere;
+  }
+
+  /* Better touch targets */
+  button,
+  a {
+    touch-action: manipulation;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
